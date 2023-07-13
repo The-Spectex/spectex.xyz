@@ -11,7 +11,6 @@ const Hero2 = () => {
                         width={500}
                         height={500}
                         alt={'Hero Image'}
-                        loading='lazy'
                     />
                 </div>
                 <div className="h-[450px] min-h-[1em] w-px self-stretch bg-blue-button-primary shadow-button-glow ">
