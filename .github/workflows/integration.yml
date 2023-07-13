@@ -1,0 +1,15 @@
+
+  name: Build Next.JS Web Application [Spectex.xyz]
+  on: push
+  jobs: 
+    build-app: 
+          name: Build App
+          runs-on: ubuntu-latest
+          steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Install Dependencies
+              run: pnpm install
+            - name: Build App
+              run: pnpm run build
+              
