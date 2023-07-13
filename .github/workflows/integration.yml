@@ -1,33 +1,17 @@
 name: Build Next.JS Web Application [Spectex.xyz]
 on: push
 jobs:
-  install-node-js:
-    runs-on: ubuntu-latest
+    # Build application with pnpm and node js
 
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 18.16.1
-  install-pnpm:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.0.2
-  install-dependencies:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: pnpm install
-  build-app:
-    name: Build App
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Build App
-        run: pnpm run build
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js 18.x
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 18.x
+            - name: Install dependencies
+              run: pnpm install
+            - name: Build
+              run: pnpm run build
