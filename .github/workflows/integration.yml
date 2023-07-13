@@ -16,13 +16,18 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 6.0.2
-  build-app:
-    name: Build App
+  install-dependencies:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Dependencies
         run: pnpm install
+  build-app:
+    name: Build App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Build App
         run: pnpm run build
