@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Nav = () => {
     return (
@@ -19,9 +20,9 @@ const Nav = () => {
                     </div>
                     <div>
                         <ul className='flex space-x-5 text-xl font-bold pt-1'>
-                            <li className='cursor-pointer'>HOME</li>
+                            <li className='cursor-pointer'><Link href={'/'}>HOME</Link></li>
                             <li className='cursor-pointer'>BLOG</li>
-                            <li className='cursor-pointer'>SERVICES</li>
+                            <li className='cursor-pointer'><Link href={'#services'}>SERVICES</Link></li>
                             <li className='cursor-pointer'>PRICING</li>
                         </ul>
                     </div>

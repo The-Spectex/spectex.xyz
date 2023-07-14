@@ -3,19 +3,19 @@ import React from 'react'
 
 const Hero = () => {
     return (
-            <div className='pt-10 mx-10'>
-                <div className='flex justify-around'>
+            <div className='pt-10 mx-10 text-center items-center justify-center'>
+                <div className='flex mr-36 justify-around'>
                     <div className='pt-16'>
-                        <div>
-                            <div className='flex text-6xl font-bold '>
+                        <div className='text-center'>
+                            <h1 className='flex text-6xl font-bold '>
                                 Building <div className='text-blue-text-green px-4'>your future</div>
-                            </div>
-                            <div className='text-6xl font-bold'>
+                            </h1>
+                            <h2 className='text-6xl font-bold'>
                                 with <div className='text-6xl font-bold bg-gradient-to-r from-blue-button-primary via-teal-400 to-green-300 inline-block text-transparent bg-clip-text'>Technology</div>
-                            </div>
+                            </h2>
                         </div>
 
-                        <p className='font-medium text-lg pt-8'>We&apos;re dedicated to building the digital future. Whether <br />
+                        <p className='font-medium text-lg pt-8 text-center'>We&apos;re dedicated to building the digital future. Whether <br />
                             you need custom software, cloud services,or anything in <br />
                             between, we&apos;ve got you covered.Let&apos;s unleash the power <br />
                             of technology and shapethe future together.</p>

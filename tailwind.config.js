@@ -9,6 +9,7 @@ module.exports = {
     boxShadow: {
       "nav-glow": "0 0 20px 5px #44A5FF",
       "button-glow": "0 0 20px 5px #0062F5",
+      "panel-glow": "0 0 30px 1px #00C2FF",
     },
     dropShadow: {
       "text-glow": "0 0 20px 5px #0066FF",
@@ -28,7 +29,8 @@ module.exports = {
           'nav-glow': '#44A5FF',
           'button-primary': '#043ED6',
           'text-green': '#00F981',
-          'text-teal': '#00E8DA'
+          'text-teal': '#00E8DA',
+          'panel-bg': '#39424F',
         }
       },
     },
