@@ -27,7 +27,6 @@ const Hero = () => {
 
                     <div
                         className="h-[450px] min-h-[1em] w-px self-stretch bg-blue-button-primary shadow-button-glow "></div>
-
                     <div>
                         <Image
                             src={'https://cdn.spectex.xyz/images/web/hero-image.png'}
