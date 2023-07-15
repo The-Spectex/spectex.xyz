@@ -6,7 +6,7 @@ import Footer from '@/components/Footer/Footer'
 import MCUTILS from '@/components/MCUTILS/MCUTILS'
 import OTHERPROJECTS from '@/components/OTHERPROJECTS/OTHERPROJECTS'
 
-export const meta: Metadata = {
+export const metadata: Metadata = {
     title: 'Spectex | Projects',
     description: 'Spectex is a company that is building a better future. We are currently working a few projects. that will help you. Such as Minecraft Utilities, Typescript Learning, and more.',
     keywords: ['Spectex', 'IT', 'Software', 'Internet', 'IT Company', 'Web Development', 'Web Developer', 'Software Development', 'SEO', 'Graphics Designing', 'Software', 'IT Solutions', 'Minecraft Utilities', 'Typescript', 'Projects', 'Spectex Projects' ],
