@@ -66,7 +66,7 @@ export default function Home() {
         <Newsletter />
       </div>
       <hr
-        className="my-12 h-px border-t-0 bg-blue-button-primary shadow-button-glow" />
+        className="my-4 h-px border-t-0 bg-blue-button-primary shadow-button-glow" />
       <div id='footer'>
         <Footer />
       </div>

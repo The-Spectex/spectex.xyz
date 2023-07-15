@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Hero2 = () => {
     return (
-        <div className='pt-16 mr-36 pb-20 text-center items-center justify-center'>
+        <div className='pt-16 pb-20 text-center items-center justify-center'>
             <div className='flex justify-around'>
                 <div>
                     <Image

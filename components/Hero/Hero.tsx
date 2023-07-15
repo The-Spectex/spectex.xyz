@@ -5,7 +5,7 @@ import React from 'react'
 const Hero = () => {
     return (
             <div className='pt-10 mx-10 text-center items-center justify-center'>
-                <div className='flex mr-36 justify-around'>
+                <div className='flex justify-around'>
                     <div className='pt-16'>
                         <div className='text-center'>
                             <h1 className='flex text-6xl font-bold '>
