@@ -22,7 +22,7 @@ const Nav = () => {
                         <ul className='flex space-x-5 text-xl font-bold pt-1'>
                             <li className='cursor-pointer'><Link href={'/'}>HOME</Link></li>
                             <li className='cursor-pointer'>BLOG</li>
-                            <li className='cursor-pointer'><Link href={'#services'}>SERVICES</Link></li>
+                            <li className='cursor-pointer'><Link href={'https://spectex.xyz/#services'}>SERVICES</Link></li>
                             <li className='cursor-pointer'>PRICING</li>
                         </ul>
                     </div>
