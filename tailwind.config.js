@@ -10,9 +10,11 @@ module.exports = {
       "nav-glow": "0 0 20px 5px #44A5FF",
       "button-glow": "0 0 20px 5px #0062F5",
       "panel-glow": "0 0 30px 1px #00C2FF",
+      "discord-glow": "0 0 20px 5px #6A5ACD",
     },
     dropShadow: {
       "text-glow": "0 0 20px 5px #0066FF",
+      "image-glow": "0 0 20px 1px #0062F5",
     },
     extend: {
       backgroundImage: {
@@ -31,6 +33,8 @@ module.exports = {
           'text-green': '#00F981',
           'text-teal': '#00E8DA',
           'panel-bg': '#39424F',
+          'discord': '#6A5ACD',
+          'secondary-button': '#32303D',
         }
       },
     },

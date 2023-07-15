@@ -13,7 +13,7 @@ const Newsletter = () => {
                         alt={'Newsletter'}
                     />
                 </div>
-                <div className='pt-32'>
+                <div className='pt-24'>
                     <div className='text-center items-center justify-center font-bold text-4xl'>
                         <h2>
                             SUBSCRIBE TO OUR
