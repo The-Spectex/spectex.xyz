@@ -9,6 +9,7 @@ import Newsletter from '@/components/Newsletter/Newsletter'
 import Footer from '@/components/Footer/Footer'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://spectex.xyz'),
   title: 'Spectex - Home | Building a better future',
   description: 'Spectex is a company that is building a better future. We provide services to help you & your business grow, such as web development, graphic design, & more',
   keywords: ['Spectex', 'IT', 'Software', 'Internet', 'IT Company', 'Web Development', 'Web Developer', 'Software Development', 'SEO', 'Graphics Designing', 'Software', 'IT Solutions'],
