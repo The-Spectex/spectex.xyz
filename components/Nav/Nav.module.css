@@ -1,0 +1,11 @@
+/* Nav.module.css */
+
+.transparent {
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}

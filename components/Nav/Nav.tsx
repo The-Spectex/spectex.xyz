@@ -1,35 +1,99 @@
-import React from 'react'
-import Image from 'next/image'
+'use client'
+import React, { useState } from "react";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import classNames from "classnames";
+import styles from "./Nav.module.css"; // Import your custom CSS file
 
-const Nav = () => {
-    const logo = "https://cdn.spectex.xyz/images/logo/logo_nav.png"
-  return (
-    <nav className='pt-5 pb-3 bg-blue-bg' data-aos="slide-down" data-aos-duration="1000">
-        <div className='flex justify-around'>
-            <div className='flex space-x-5'>
-                <div>
-                    <Image src={logo} height={50} width={50} alt='logo'/>        
-                </div>
-                <div className='font-black text-2xl pt-2'>SPECTEX</div>
-            </div>
-            <div className='pt-2'>
-                <ul className='flex space-x-5'>
-                    <li className='font-semibold'>Home</li>
-                    <li className='font-semibold'>Services</li>
-                    <li className='font-semibold'>Projects</li>
-                    <li className='font-semibold'>Contact</li>
-                    <li className='font-semibold'>About</li>
-                </ul>
-            </div>
-            <div className='pt-2'>
-                <ul className='flex space-x-5'>
-                    <li className='font-semibold'>Login</li>
-                    <li className='font-semibold'>Signup</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-  )
+interface MobileMenuProps {
+  isOpen: boolean;
 }
 
-export default Nav
+const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen }) => (
+  <div
+    className={classNames(
+      "md:hidden bg-gray-800 bg-opacity-70 text-white absolute top-16 right-0 left-0 z-20",
+      {
+        hidden: !isOpen,
+      }
+    )}
+  >
+    <ul className="flex flex-col items-center space-y-6 py-6">
+      <li className="font-semibold text-lg">Home</li>
+      <li className="font-semibold text-lg">Services</li>
+      <li className="font-semibold text-lg">Projects</li>
+      <li className="font-semibold text-lg">Contact</li>
+      <li className="font-semibold text-lg">About</li>
+      <li className="font-semibold text-lg">Login</li>
+      <li className="font-semibold text-lg">Signup</li>
+    </ul>
+  </div>
+);
+
+const Nav = () => {
+  const logo = "https://cdn.spectex.xyz/images/logo/logo_nav.png";
+
+  // State to manage mobile menu visibility
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Function to toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  return (
+    <nav className="py-3 px-4 md:px-0 bg-blue-bg">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <div className="relative w-10 h-10">
+            <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
+          </div>
+          <div className="font-black text-xl text-white">SPECTEX</div>
+        </div>
+
+        {/* Mobile Hamburger Menu Button */}
+        <div className="md:hidden">
+          <button
+            className={classNames(
+              "text-gray-500 hover:text-gray-900 focus:text-gray-900",
+              {
+                [styles.transparent]: isMobileMenuOpen,
+              }
+            )}
+            onClick={toggleMobileMenu}
+          >
+            {isMobileMenuOpen ? (
+              <FontAwesomeIcon
+                icon={faTimes}
+                className={classNames("h-8 w-8 text-white", styles.rotate)}
+              />
+            ) : (
+              <FontAwesomeIcon icon={faBars} className="h-8 w-8 text-white" />
+            )}
+          </button>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-6">
+          <ul className="flex space-x-6 text-white">
+            <li className="font-semibold">Home</li>
+            <li className="font-semibold">Services</li>
+            <li className="font-semibold">Projects</li>
+            <li className="font-semibold">Contact</li>
+            <li className="font-semibold">About</li>
+          </ul>
+          <ul className="flex space-x-6 text-white">
+            <li className="font-semibold">Login</li>
+            <li className="font-semibold">Signup</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <MobileMenu isOpen={isMobileMenuOpen} />
+    </nav>
+  );
+};
+
+export default Nav;
