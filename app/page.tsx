@@ -1,12 +1,7 @@
-import Hero from '@/components/Hero/Hero'
-import Hero2 from '@/components/Hero2/Hero2'
-import Nav from '@/components/Nav/Nav'
 import Image from 'next/image'
 import type { Metadata } from 'next'
-import Services from '@/components/Services/Services'
-import Reviews from '@/components/Reviews/Reviews'
-import Newsletter from '@/components/Newsletter/Newsletter'
-import Footer from '@/components/Footer/Footer'
+import Nav from '@/components/Nav/Nav'
+import Hero from '@/components/Hero/Hero'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://spectex.xyz'),
@@ -47,30 +42,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className='bg-gradient-to-b from-blue-background-start via-blue-background-mid to-blue-background-stop'>
+    <main className='bg-blue-bg'>
       <Nav />
       <Hero />
-      <hr
-        className="my-12 h-px border-t-0 bg-blue-button-primary shadow-button-glow" />
-      <Hero2 />
-      <div id='services'>
-        <Services />
-      </div>
-      <hr
-        className="my-12 h-px border-t-0 bg-blue-button-primary shadow-button-glow" />
-      <div id='reviews'>
-        <Reviews />
-      </div>
-      <hr
-        className="my-12 h-px border-t-0 bg-blue-button-primary shadow-button-glow" />
-      <div id='newsletter'>
-        <Newsletter />
-      </div>
-      <hr
-        className="my-4 h-px border-t-0 bg-blue-button-primary shadow-button-glow" />
-      <div id='footer'>
-        <Footer />
-      </div>
+      <hr />
     </main>
   )
 }

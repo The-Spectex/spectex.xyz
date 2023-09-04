@@ -1,10 +1,13 @@
+'use client'
 import Head from 'next/head'
 import './globals.css'
-import { Space_Grotesk } from 'next/font/google'
+import localFont from 'next/font/local'
 import Script from 'next/script'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-
-const inter = Space_Grotesk({ subsets: ['latin'] })
+const myFont = localFont({ src: '../fonts/Mona-Sans.ttf' })
 
 
 export default function RootLayout({
@@ -12,11 +15,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  useEffect(() => {
+    AOS.init();
+  }
+  , []);
   return (
     <html lang="en">
       <Head>
       </Head>
-      <body className={inter.className}>
+      <body className={myFont.className}>
         <Script async src='https://www.googletagmanager.com/gtag/js?id=G-FCYDXC21DV' strategy='afterInteractive'/>
         <Script id='google-analytics' strategy='afterInteractive'>
           {`

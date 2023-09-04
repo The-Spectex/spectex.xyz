@@ -24,17 +24,7 @@ module.exports = {
       },
       colors: {
         'blue': {
-          'background-start': '#0C1016',
-          'background-mid': '#0B0F14',
-          'background-stop': '#0D1117',
-          'nav-color': '#182A59',
-          'nav-glow': '#44A5FF',
-          'button-primary': '#043ED6',
-          'text-green': '#00F981',
-          'text-teal': '#00E8DA',
-          'panel-bg': '#39424F',
-          'discord': '#6A5ACD',
-          'secondary-button': '#32303D',
+          'bg': '#15161E',
         }
       },
     },

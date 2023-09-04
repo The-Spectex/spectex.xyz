@@ -1,44 +1,29 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
 const Hero = () => {
-    return (
-            <div className='pt-10 mx-10 text-center items-center justify-center'>
-                <div className='flex justify-around'>
-                    <div className='pt-16'>
-                        <div className='text-center'>
-                            <h1 className='flex text-6xl font-bold '>
-                                Building <div className='text-blue-text-green px-4'>your future</div>
-                            </h1>
-                            <h2 className='text-6xl font-bold'>
-                                with <div className='text-6xl font-bold bg-gradient-to-r from-blue-button-primary via-teal-400 to-green-300 inline-block text-transparent bg-clip-text'>Technology</div>
-                            </h2>
-                        </div>
+    const bg = 'https://cdn.spectex.xyz/images/web/coding.png'
+  return (
+    <section className="pt-40 pb-52 bg-blue-bg">
+      <div className="flex justify-around">
+        <div className="ml-44 mr-72">
+          <h1 className="text-7xl font-black" data-aos="fade-in" data-aos-duration="1000">
+            Building Your <span className="text-green-400">Future</span> With{" "}
+            <span className="text-blue-500">Technology</span>
+          </h1>
+          <p className=" font-medium pt-2" data-aos-duration="500" data-aos="slide-right">
+            We're dedicated to building the digital future. Whether you need
+            custom software, cloud services, or anything in between, we've got
+            you covered. Let's unleash the power of technology and shape the
+            future together.
+          </p>
+        </div>
+        <div className="-my-20" data-aos="fade-in">
+            <Image className="rounded-3xl" src={bg} width={1200} height={1200} alt="background"/>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-                        <p className='font-medium text-lg pt-8 text-center'>We&apos;re dedicated to building the digital future. Whether <br />
-                            you need custom software, cloud services,or anything in <br />
-                            between, we&apos;ve got you covered.Let&apos;s unleash the power <br />
-                            of technology and shapethe future together.</p>
-                        <div className='flex space-x-5 pt-8 text-center items-center justify-center'>
-                            <button className='bg-blue-button-primary pt-3 pb-3 px-6 rounded-lg font-bold shadow-button-glow'><Link href={'/projects'}>PROJECTS</Link></button>
-                            <button className='font-bold'>SERVICES</button>
-                        </div>
-                    </div>
-
-                    <div
-                        className="h-[450px] min-h-[1em] w-px self-stretch bg-blue-button-primary shadow-button-glow "></div>
-                    <div>
-                        <Image
-                            src={'https://cdn.spectex.xyz/images/web/hero-image.png'}
-                            width={500}
-                            height={500}
-                            alt={'Hero Image'}
-                        />
-                    </div>
-                </div>
-            </div>
-    )
-}
-
-export default Hero
+export default Hero;
