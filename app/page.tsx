@@ -2,6 +2,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import Nav from '@/components/Nav/Nav'
 import Hero from '@/components/Hero/Hero'
+import Mid from '@/components/Mid/Mid'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://spectex.xyz'),
@@ -46,6 +47,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <hr />
+      <Mid/>
     </main>
   )
 }

@@ -25,6 +25,7 @@ module.exports = {
       colors: {
         'blue': {
           'bg': '#15161E',
+          'bg-light': '#292B39',
         }
       },
     },

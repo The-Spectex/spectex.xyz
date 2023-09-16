@@ -6,6 +6,8 @@ import Script from 'next/script'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const myFont = localFont({ src: '../fonts/Mona-Sans.ttf' })
 
