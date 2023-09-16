@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,7 +43,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="py-3 px-4 md:px-0 bg-blue-bg">
+    <nav className="py-5 px-4 md:px-0 bg-blue-bg" data-aos="slide-down">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <div className="relative w-10 h-10">
@@ -77,15 +77,15 @@ const Nav = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
           <ul className="flex space-x-6 text-white">
-            <li className="font-semibold">Home</li>
-            <li className="font-semibold">Services</li>
-            <li className="font-semibold">Projects</li>
-            <li className="font-semibold">Contact</li>
-            <li className="font-semibold">About</li>
+            <li className="font-semibold cursor-pointer hover:text-bold">Home</li>
+            <li className="font-semibold cursor-pointer hover:text-bold">Services</li>
+            <li className="font-semibold cursor-pointer hover:text-bold">Projects</li>
+            <li className="font-semibold cursor-pointer hover:text-bold">Contact</li>
+            <li className="font-semibold cursor-pointer hover:text-bold">About</li>
           </ul>
           <ul className="flex space-x-6 text-white">
-            <li className="font-semibold">Login</li>
-            <li className="font-semibold">Signup</li>
+            <li className="font-semibold cursor-pointer hover:text-bold">Login</li>
+            <li className="font-semibold cursor-pointer hover:text-bold">Signup</li>
           </ul>
         </div>
       </div>
