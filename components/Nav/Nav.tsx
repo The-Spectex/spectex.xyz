@@ -1,43 +1,21 @@
-"use client";
+'use client'
+// Nav.tsx
 import React, { useState } from "react";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
-import styles from "./Nav.module.css"; // Import your custom CSS file
+import styles from "./Nav.module.css";
+import MobileMenu from "./MobileMenu"; // Extracted MobileMenu component
+import Image from "next/image";
+import logo_nav from "@/assets/images/logo/logo_nav.png"
 
-interface MobileMenuProps {
-  isOpen: boolean;
-}
+interface NavProps {}
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen }) => (
-  <div
-    className={classNames(
-      "md:hidden bg-gray-800 bg-opacity-70 text-white absolute top-16 right-0 left-0 z-20",
-      {
-        hidden: !isOpen,
-      }
-    )}
-  >
-    <ul className="flex flex-col items-center space-y-6 py-6">
-      <li className="font-semibold text-lg">Home</li>
-      <li className="font-semibold text-lg">Services</li>
-      <li className="font-semibold text-lg">Projects</li>
-      <li className="font-semibold text-lg">Contact</li>
-      <li className="font-semibold text-lg">About</li>
-      <li className="font-semibold text-lg">Login</li>
-      <li className="font-semibold text-lg">Signup</li>
-    </ul>
-  </div>
-);
+const Nav: React.FC<NavProps> = () => {
+  const logo = logo_nav; // Updated image path
 
-const Nav = () => {
-  const logo = "https://cdn.spectex.xyz/images/logo/logo_nav.png";
-
-  // State to manage mobile menu visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Function to toggle mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -47,7 +25,7 @@ const Nav = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <div className="relative w-10 h-10">
-            <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
+            <Image src={logo} alt="logo" height={40} width={40} className="w-full h-full" />
           </div>
           <div className="font-black text-xl text-white">SPECTEX</div>
         </div>

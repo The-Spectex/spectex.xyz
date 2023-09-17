@@ -3,13 +3,12 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import coding from "@/assets/images/web/coding.png";
 
 const Hero = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-
-  const bg = 'https://cdn.spectex.xyz/images/web/coding.png';
 
   return (
     <section className="pt-10 lg:pt-20 pb-16 lg:pb-32 bg-blue-bg">
@@ -35,7 +34,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="hidden lg:block" data-aos="fade-left">
-          <Image className="rounded-3xl" src={bg} width={1200} height={1200} alt="background" />
+          <Image className="rounded-3xl" src={coding} width={1200} height={1200} alt="background" />
         </div>
       </div>
     </section>
